@@ -16,8 +16,13 @@ public class PingOrPongController : ControllerBase
     [HttpGet("{isPingOrPong}")]
     public PingOrPong Get(string isPingOrPong)
     {
-        var pingOrPong = new PingOrPong(isPingOrPong);
-
+        var pingOrPong = new PingOrPong();
+        switch (isPingOrPong.ToLower().Trim())
+        {
+            case "pong": pingOrPong.msg = "Ping"; break;
+            case "ping": pingOrPong.msg = "Pong"; break;
+            default: return null;
+        }
         return pingOrPong;
     }
 }
