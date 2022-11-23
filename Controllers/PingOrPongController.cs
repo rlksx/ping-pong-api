@@ -7,7 +7,6 @@ namespace ping_pong_api.Controllers;
 public class PingOrPongController : ControllerBase
 {
     private readonly ILogger<PingOrPongController> _logger;
-
     public PingOrPongController(ILogger<PingOrPongController> logger)
     {
         _logger = logger;
