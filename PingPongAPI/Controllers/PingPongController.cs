@@ -1,8 +1,7 @@
-using System.Net.NetworkInformation;
 using Microsoft.AspNetCore.Mvc;
-using ping_pong_api.Models;
+using PingPongAPI.Models;
 
-namespace ping_pong_api.Controllers;
+namespace PingPongAPI.Controllers;
 
 [ApiController]
 public class PingPongController : ControllerBase
@@ -14,8 +13,8 @@ public class PingPongController : ControllerBase
         
         switch (response.Trim().ToLower())
         {
-            case "pong": pingPong.PingOrPong = "Ping"; break;
-            case "ping": pingPong.PingOrPong = "Pong"; break;
+            case "pong": pingPong.msg = "Ping"; break;
+            case "ping": pingPong.msg = "Pong"; break;
             default: return NotFound();
         }
         return Ok(pingPong);

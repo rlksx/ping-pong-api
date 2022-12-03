@@ -1,6 +1,6 @@
-namespace ping_pong_api.Models;
+namespace PingPongAPI.Models;
 
 public class PingPong
 {
-    public string PingOrPong { get; set; }
+    public string msg { get; set; }
 }
