@@ -3,9 +3,9 @@
 
 ## About
 It's a REST API planned by me for a college assignment, where I perform a simple API made with C# that uses URI resources to return `ping` (if you send pong) and `pong` (if you send ping).
-> The result from request are in JSON format and when is send wrong path the return is "-1".
+> TThe result from request are in JSON format and when is send wrong path the return HTTP 404 (NOT FOUND).
 
-![Captura de tela de 2022-11-17 01-30-45](https://user-images.githubusercontent.com/99461398/202355752-22f5e7d8-e1c9-4ccc-879e-6bc1bdfaa9d2.png)
+![image](https://user-images.githubusercontent.com/99461398/205456350-528f2d21-2b9c-4739-92d3-787ed08387ea.png)
 
 ## Routes
 The root path is `PingOrPong`. So, when you run the project in localhost you must use `https://localhost:{port}/PingOrPong/{you-request}` or you can use swagger using `https://localhost:{port}/swagger` and do request using it.
